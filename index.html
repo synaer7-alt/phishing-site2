@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bank Login</title>
+</head>
+<body>
+  <h1>Welcome to Fake Bank!</h1>
+  <form id="login-form">
+    <label>Username: <input type="text" name="username"></label><br>
+    <label>Password: <input type="password" name="password"></label><br>
+    <button type="submit">Login</button>
+  </form>
+  <p id="message"></p>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var username = document.querySelector('input[name="username"]').value;
+      var password = document.querySelector('input[name="password"]').value;
+      // Here, you should send the data to a server. GitHub Pages doesn't have one.
+      document.getElementById('message').innerText = 'Login successful!';
+    });
+  </script>
+</body>
+</html>
